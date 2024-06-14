@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 //4th Step Prepare the ViewModel to access DAO Methods from ItemDao
 
+//InventoryViewModel.kt
 class InventoryViewModel(private val itemDao: ItemDao): ViewModel() {
 
     val allItems: LiveData<List<Item>> = itemDao.getItems().asLiveData()
